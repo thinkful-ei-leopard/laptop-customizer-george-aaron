@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import slugify from 'slugify';
 
 import './App.css';
-
+import Header from  './Header';
 // This object will allow us to
 // easily convert numbers into US dollar values
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
@@ -48,6 +48,8 @@ class App extends Component {
       const featureHash = feature + '-' + idx;
       const options = this.props.features[feature].map(item => {
         const itemHash = slugify(JSON.stringify(item));
+        console.log(itemHash);
+        console.log(feature);
         return (
           <div key={itemHash} className="feature__item">
             <input
@@ -89,7 +91,7 @@ class App extends Component {
         </div>
       );
     });
-
+//calculates total and store into total constant
     const total = Object.keys(this.state.selected).reduce(
       (acc, curr) => acc + this.state.selected[curr].cost,
       0
@@ -97,9 +99,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing | Laptops</h1>
-        </header>
+       <Header 
+
+       />
         <main>
           <form className="main__form">
             <h2>Customize your laptop</h2>
