@@ -1,10 +1,9 @@
 import React from 'react';
-import Summary from './Summary';
 
 class  Total extends React.Component {
 
 
-// {/* <section className="main__summary"><h2>Your cart</h2> */}
+
 
 
 render  ()  {

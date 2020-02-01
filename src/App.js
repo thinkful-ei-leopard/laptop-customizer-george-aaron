@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import slugify from 'slugify';
 import './App.css';
 import Header from  './Header';
 import Features from './Features'
-import Total from './Total'
 import Summary from './Summary'
 
-// This object will allow us to
-// easily convert numbers into US dollar values
 
 
 class App extends Component {
